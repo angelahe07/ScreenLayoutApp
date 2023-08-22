@@ -2,4 +2,6 @@
 <resources>
     <dimen name="padding">14dp</dimen>
     <dimen name="fontSize">24dp</dimen>
+    <dimen name="betweenMargin">36dp</dimen>
+    <dimen name="topAndBottomMargin">48dp</dimen>
 </resources>
