@@ -88,9 +88,9 @@
         android:id="@+id/greenPhoto"
         android:layout_width="108dp"
         android:layout_height="224dp"
-        android:layout_marginTop="@dimen/betweenMargin"
+        android:layout_marginTop="28dp"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.50"
+        app:layout_constraintHorizontal_bias="0.498"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/hobby"
         app:srcCompat="@drawable/sage_green_aesthetic_nawpic" />
