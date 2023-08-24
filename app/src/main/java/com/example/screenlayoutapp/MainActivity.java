@@ -43,8 +43,9 @@ public class MainActivity extends AppCompatActivity {
          */
         // coming from this screen, going to ShowInfoActivity
         Intent intent = new Intent(this, ShowInfoActivity.class);
-        // launch the new screen
+        // OPTIONAL - you don't have to put anything in the intent
         intent.putExtra("FULLTEXT", fullText);
+        // launch the new screen
         startActivity(intent);
 
     }
