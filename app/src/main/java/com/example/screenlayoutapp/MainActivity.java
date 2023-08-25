@@ -55,16 +55,10 @@ public class MainActivity extends AppCompatActivity {
         Log.i("angela", "First screen" + hobbyText);
         intent1.putExtra("HobbyText", hobbyText);
 
-
-
         startActivity(intent1);
 
     }
 
-    public void switchScreens2(View v){
-        Intent intent2 = new Intent(this, activity_third_page.class);
-        startActivity(intent2);
-    }
 
 }
 

@@ -5,6 +5,7 @@ import androidx.appcompat.app.AppCompatActivity;
 import android.content.Intent;
 import android.os.Bundle;
 import android.util.Log;
+import android.view.View;
 import android.widget.TextView;
 
 public class ShowInfoActivity extends AppCompatActivity {
@@ -38,5 +39,10 @@ public class ShowInfoActivity extends AppCompatActivity {
         TextView hobbyTV = findViewById(R.id.hobbyTextView);
         hobbyTV.setText("Hobbies: " + receivedHobbyText);
 
+    }
+
+    public void switchScreen2(View v){
+        Intent intent2 = new Intent(this, MainActivity.class);
+        startActivity(intent2);
     }
 }

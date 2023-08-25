@@ -66,17 +66,18 @@
         app:srcCompat="@drawable/sage_green_aesthetic_nawpic" />
 
     <Button
+        android:background="@drawable/round_style"
         android:id="@+id/buttonClickHere"
+        style="@android:style/Widget.Material.Button.Colored"
         android:layout_width="129dp"
         android:layout_height="114dp"
         android:layout_marginTop="140dp"
-        android:background="@color/pastelGreen"
-        android:text="Click Here"
-        android:onClick="switchScreens2"
+        android:backgroundTint="@color/pastelGreen"
+        android:onClick="switchScreen2"
+        android:text="Back"
         android:textAppearance="@style/TextAppearance.AppCompat.Display1"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.483"
+        app:layout_constraintHorizontal_bias="0.50"
         app:layout_constraintStart_toEndOf="@+id/page2PhotoFaceGreen"
         app:layout_constraintTop_toBottomOf="@+id/hobbyTextView" />
-
 </androidx.constraintlayout.widget.ConstraintLayout>
