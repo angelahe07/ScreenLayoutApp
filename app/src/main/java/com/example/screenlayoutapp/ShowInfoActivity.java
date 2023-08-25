@@ -16,14 +16,27 @@ public class ShowInfoActivity extends AppCompatActivity {
 
         // open the intent to get the data when the screen loads
         Intent intent = getIntent();
-        String receivedFullText = intent.getStringExtra("FULLTEXT");
+        String receivedNameText = intent.getStringExtra("NameText");
         // log to see what was received
-        Log.i("Angela", "received: " + receivedFullText);
+        Log.i("Angela", "received: " + receivedNameText);
 
         // get a reference to TextView
         // set the text of TextView
 
-        TextView infoTV = findViewById(R.id.infoTextView);
-        infoTV.setText(receivedFullText);
+        TextView nameTV = findViewById(R.id.nameTextView);
+        nameTV.setText("Hi, " + receivedNameText);
+
+        String receivedAgeText = intent.getStringExtra("AgeText");
+        Log.i("Angela", "received: " + receivedAgeText);
+
+        TextView ageTV = findViewById(R.id.ageTextView);
+        ageTV.setText("You are " + receivedAgeText + " years old.");
+
+        String receivedHobbyText = intent.getStringExtra("HobbyText");
+        Log.i("Angela", "received: " + receivedHobbyText);
+
+        TextView hobbyTV = findViewById(R.id.hobbyTextView);
+        hobbyTV.setText("Hobbies: " + receivedHobbyText);
+
     }
 }

@@ -11,20 +11,71 @@
         android:id="@+id/nameTextView"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_marginTop="80dp"
+        android:fontFamily="@font/cinzel_decorative_bold"
         android:gravity="center_horizontal|center_vertical"
         android:text="New Screen - Name"
-        android:textSize="20sp"
-        app:layout_constraintBottom_toBottomOf="parent"
+        android:textColor="@color/forestGreen"
+        android:textSize="34sp"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.50"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
     <TextView
-        android:id="@+id/AgeTextView"
+        android:id="@+id/ageTextView"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="TextView"
-        tools:layout_editor_absoluteX="53dp"
-        tools:layout_editor_absoluteY="89dp" />
+        android:layout_marginTop="@dimen/betweenMargin"
+        android:fontFamily="@font/milonga"
+        android:gravity="bottom|center|top"
+        android:text="New Screen - Age"
+        android:textColor="@color/forestGreen"
+        android:textSize="34sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.50"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/nameTextView" />
+
+    <TextView
+        android:id="@+id/hobbyTextView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/betweenMargin"
+        android:gravity="bottom|center|top"
+        android:text="New Screen - Hobby"
+        android:textColor="@color/forestGreen"
+        android:textSize="20sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.50"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/ageTextView" />
+
+    <ImageView
+        android:id="@+id/page2PhotoFaceGreen"
+        android:layout_width="137dp"
+        android:layout_height="271dp"
+        android:layout_marginStart="48dp"
+        android:layout_marginTop="56dp"
+        android:adjustViewBounds="true"
+        android:baselineAlignBottom="true"
+        android:cropToPadding="false"
+        android:scaleType="fitXY"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/hobbyTextView"
+        app:srcCompat="@drawable/sage_green_aesthetic_nawpic" />
+
+    <Button
+        android:id="@+id/buttonClickHere"
+        android:layout_width="129dp"
+        android:layout_height="114dp"
+        android:layout_marginTop="140dp"
+        android:background="@color/pastelGreen"
+        android:text="Click Here"
+        android:textAppearance="@style/TextAppearance.AppCompat.Display1"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.483"
+        app:layout_constraintStart_toEndOf="@+id/page2PhotoFaceGreen"
+        app:layout_constraintTop_toBottomOf="@+id/hobbyTextView" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

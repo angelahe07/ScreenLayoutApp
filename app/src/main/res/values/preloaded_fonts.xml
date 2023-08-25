@@ -2,6 +2,8 @@
 <resources>
     <array name="preloaded_fonts" translatable="false">
         <item>@font/almendra_display</item>
+        <item>@font/cinzel_decorative_bold</item>
         <item>@font/laila_medium</item>
+        <item>@font/milonga</item>
     </array>
 </resources>

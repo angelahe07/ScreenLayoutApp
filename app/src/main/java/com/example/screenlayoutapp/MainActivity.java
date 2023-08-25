@@ -33,9 +33,9 @@ public class MainActivity extends AppCompatActivity {
         EditText hobbyET = findViewById(R.id.hobbyEditText);
         String hobby = hobbyET.getText().toString();
 
-        String fullText = name + ", " + age + "\n" + hobby;
+        String nameText = name;
         // first param is a searchable tag, second is what you are logging
-        Log.i("angela", "First screen" + fullText);
+        Log.i("angela", "First screen" + nameText);
         /*
         To switch screens, we need to create and Intent, tell it where to go, put data in the intent
         (optional), startActivity to actually launch the Intent (go to other screen).
@@ -44,8 +44,18 @@ public class MainActivity extends AppCompatActivity {
         // coming from this screen, going to ShowInfoActivity
         Intent intent = new Intent(this, ShowInfoActivity.class);
         // OPTIONAL - you don't have to put anything in the intent
-        intent.putExtra("FULLTEXT", fullText);
+        intent.putExtra("NameText", nameText);
         // launch the new screen
+
+        String ageText = age;
+        Log.i("angela", "First screen" + ageText);
+        intent.putExtra("AgeText", ageText);
+
+        String hobbyText = hobby;
+        Log.i("angela", "First screen" + hobbyText);
+        intent.putExtra("HobbyText", hobbyText);
+
+
         startActivity(intent);
 
     }
