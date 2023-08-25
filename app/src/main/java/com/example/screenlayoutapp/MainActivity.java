@@ -42,23 +42,30 @@ public class MainActivity extends AppCompatActivity {
         (make package, address it, stuff it, mail it
          */
         // coming from this screen, going to ShowInfoActivity
-        Intent intent = new Intent(this, ShowInfoActivity.class);
+        Intent intent1 = new Intent(this, ShowInfoActivity.class);
         // OPTIONAL - you don't have to put anything in the intent
-        intent.putExtra("NameText", nameText);
+        intent1.putExtra("NameText", nameText);
         // launch the new screen
 
         String ageText = age;
         Log.i("angela", "First screen" + ageText);
-        intent.putExtra("AgeText", ageText);
+        intent1.putExtra("AgeText", ageText);
 
         String hobbyText = hobby;
         Log.i("angela", "First screen" + hobbyText);
-        intent.putExtra("HobbyText", hobbyText);
+        intent1.putExtra("HobbyText", hobbyText);
 
 
-        startActivity(intent);
+
+        startActivity(intent1);
 
     }
+
+    public void switchScreens2(View v){
+        Intent intent2 = new Intent(this, activity_third_page.class);
+        startActivity(intent2);
+    }
+
 }
 
 
