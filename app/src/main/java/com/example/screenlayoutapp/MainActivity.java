@@ -27,11 +27,11 @@ public class MainActivity extends AppCompatActivity {
         // .getText is an Editable, not a String so we call toString so we can save it in a String variable
         String name = nameET.getText().toString();
 
-        EditText ageET = findViewById(R.id.ageEditText);
-        String age = ageET.getText().toString();
+        EditText pwdET = findViewById(R.id.pwdEditText);
+        String age = pwdET.getText().toString();
 
-        EditText hobbyET = findViewById(R.id.hobbyEditText);
-        String hobby = hobbyET.getText().toString();
+        EditText ageET = findViewById(R.id.ageEditText);
+        String hobby = ageET.getText().toString();
 
         String nameText = name;
         // first param is a searchable tag, second is what you are logging
@@ -47,13 +47,6 @@ public class MainActivity extends AppCompatActivity {
         intent1.putExtra("NameText", nameText);
         // launch the new screen
 
-        String ageText = age;
-        Log.i("angela", "First screen" + ageText);
-        intent1.putExtra("AgeText", ageText);
-
-        String hobbyText = hobby;
-        Log.i("angela", "First screen" + hobbyText);
-        intent1.putExtra("HobbyText", hobbyText);
 
         startActivity(intent1);
 

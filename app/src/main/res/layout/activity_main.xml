@@ -9,6 +9,7 @@
 
         <EditText
             android:id="@+id/ageEditText"
+            android:inputType="number"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginTop="@dimen/betweenMargin"
@@ -16,7 +17,6 @@
             android:ems="10"
             android:freezesText="true"
             android:hint="Age"
-            android:inputType="text"
             android:padding="@dimen/padding"
             android:textColor="@color/forestGreen"
             android:textColorHint="@color/material_dynamic_secondary50"
@@ -54,7 +54,7 @@
             android:ems="10"
             android:fontFamily="sans-serif"
             android:hint="Password"
-            android:inputType="number"
+            android:inputType="textPassword"
             android:padding="@dimen/padding"
             android:textColor="@color/forestGreen"
             android:textColorHint="@color/material_dynamic_secondary50"
