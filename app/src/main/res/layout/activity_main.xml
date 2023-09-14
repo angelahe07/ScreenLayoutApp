@@ -8,8 +8,26 @@
     tools:context=".MainActivity">
 
         <EditText
+            android:id="@+id/pwdEditText"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/betweenMargin"
+            android:contextClickable="true"
+            android:ems="10"
+            android:fontFamily="sans-serif"
+            android:hint="Password"
+            android:inputType="textPassword"
+            android:padding="@dimen/padding"
+            android:textColor="@color/forestGreen"
+            android:textColorHint="@color/material_dynamic_secondary50"
+            android:textSize="@dimen/fontSize"
+            app:layout_constraintEnd_toEndOf="@+id/nameEditText"
+            app:layout_constraintHorizontal_bias="1.0"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/nameEditText" />
+
+        <EditText
             android:id="@+id/ageEditText"
-            android:inputType="number"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginTop="@dimen/betweenMargin"
@@ -17,6 +35,7 @@
             android:ems="10"
             android:freezesText="true"
             android:hint="Age"
+            android:inputType="number"
             android:padding="@dimen/padding"
             android:textColor="@color/forestGreen"
             android:textColorHint="@color/material_dynamic_secondary50"
@@ -41,48 +60,24 @@
             android:textColorHint="@color/material_dynamic_secondary50"
             android:textSize="@dimen/fontSize"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.50"
+            app:layout_constraintHorizontal_bias="0.221"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent" />
 
-        <EditText
-            android:id="@+id/pwdEditText"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="@dimen/betweenMargin"
-            android:contextClickable="true"
-            android:ems="10"
-            android:fontFamily="sans-serif"
-            android:hint="Password"
-            android:inputType="textPassword"
-            android:padding="@dimen/padding"
-            android:textColor="@color/forestGreen"
-            android:textColorHint="@color/material_dynamic_secondary50"
-            android:textSize="@dimen/fontSize"
-            app:layout_constraintEnd_toEndOf="@+id/nameEditText"
-            app:layout_constraintHorizontal_bias="1.0"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/nameEditText" />
-
         <Button
+            android:id="@+id/showHideButton"
+            android:layout_width="70dp"
+            android:layout_height="50dp"
             android:background="@drawable/round_style"
-            android:id="@+id/buttonContinue"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="@dimen/betweenMargin"
-            android:layout_marginBottom="@dimen/topAndBottomMargin"
+            android:backgroundTint="@color/lightGreen"
             android:onClick="switchScreens"
             android:padding="@dimen/padding"
-            android:text="Continue"
+            android:text="Show"
             android:textColor="@color/material_dynamic_tertiary50"
             android:textColorHighlight="@color/material_dynamic_secondary100"
             android:textColorHint="@color/material_dynamic_neutral_variant100"
-            android:backgroundTint="@color/lightGreen"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.50"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/greenPhoto"
-            app:layout_constraintVertical_bias="0.333" />
+            tools:layout_editor_absoluteX="317dp"
+            tools:layout_editor_absoluteY="160dp" />
 
         <ImageView
             android:background="@drawable/round_style"

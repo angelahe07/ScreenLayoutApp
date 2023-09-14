@@ -4,6 +4,8 @@ import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.Intent;
 import android.os.Bundle;
+import android.text.method.HideReturnsTransformationMethod;
+import android.text.method.PasswordTransformationMethod;
 import android.util.Log;
 import android.view.View;
 import android.widget.EditText;
@@ -14,6 +16,16 @@ public class MainActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+        showHideButton.setOnClickListener {
+            if(showHideButton.text.toString().equals("Show")){
+                pwd.transformationMethod = HideReturnsTransformationMethod.getInstance()
+                showHideButton.text = "Hide";
+            } else{
+                pwd.transformationMethod = PasswordTransformationMethod.getInstance()
+                showHideButton.text = "Show";
+            }
+        }
+
     }
 
     /* Create a method that can be called when the user clicks on the button.
@@ -46,7 +58,6 @@ public class MainActivity extends AppCompatActivity {
         // OPTIONAL - you don't have to put anything in the intent
         intent1.putExtra("NameText", nameText);
         // launch the new screen
-
 
         startActivity(intent1);
 
