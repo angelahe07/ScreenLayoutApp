@@ -1,69 +1,36 @@
 package com.example.screenlayoutapp;
-
 import androidx.appcompat.app.AppCompatActivity;
-
-import android.content.Intent;
 import android.os.Bundle;
 import android.text.method.HideReturnsTransformationMethod;
 import android.text.method.PasswordTransformationMethod;
-import android.util.Log;
-import android.view.View;
+import android.widget.CheckBox;
+import android.widget.CompoundButton;
 import android.widget.EditText;
 
+
 public class MainActivity extends AppCompatActivity {
+    EditText password;
+    CheckBox showpwd;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
-        showHideButton.setOnClickListener {
-            if(showHideButton.text.toString().equals("Show")){
-                pwd.transformationMethod = HideReturnsTransformationMethod.getInstance()
-                showHideButton.text = "Hide";
-            } else{
-                pwd.transformationMethod = PasswordTransformationMethod.getInstance()
-                showHideButton.text = "Show";
+
+        password = findViewById(R.id.pwdEditText);
+        showpwd = findViewById(R.id.showHide);
+
+        showpwd.setOnCheckedChangeListener(new CompoundButton.OnCheckedChangeListener(){
+            public void onCheckedChanged(CompoundButton compoundButton,boolean b){
+                if(b){
+                    password.setTransformationMethod(HideReturnsTransformationMethod.getInstance());
+                }
+                else{
+                    password.setTransformationMethod(PasswordTransformationMethod.getInstance());
+                }
             }
-        }
-
+        });
     }
-
-    /* Create a method that can be called when the user clicks on the button.
-    - In order for this method to be called, it MUST have a specific method signature
-    - must be public void
-    - must take ONLY one parameter of type View. */
-    public void switchScreens(View v){
-        // first we make a reference to the EditText by locating it with its id
-        EditText nameET = findViewById(R.id.nameEditText);
-        // use that reference to extract the text and save it into a String variable
-        // .getText is an Editable, not a String so we call toString so we can save it in a String variable
-        String name = nameET.getText().toString();
-
-        EditText pwdET = findViewById(R.id.pwdEditText);
-        String age = pwdET.getText().toString();
-
-        EditText ageET = findViewById(R.id.ageEditText);
-        String hobby = ageET.getText().toString();
-
-        String nameText = name;
-        // first param is a searchable tag, second is what you are logging
-        Log.i("angela", "First screen" + nameText);
-        /*
-        To switch screens, we need to create and Intent, tell it where to go, put data in the intent
-        (optional), startActivity to actually launch the Intent (go to other screen).
-        (make package, address it, stuff it, mail it
-         */
-        // coming from this screen, going to ShowInfoActivity
-        Intent intent1 = new Intent(this, ShowInfoActivity.class);
-        // OPTIONAL - you don't have to put anything in the intent
-        intent1.putExtra("NameText", nameText);
-        // launch the new screen
-
-        startActivity(intent1);
-
-    }
-
-
 }
 
 
